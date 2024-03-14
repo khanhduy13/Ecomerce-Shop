@@ -7,6 +7,7 @@ import tiki3 from "../../assets/images/tiki3.png"
 import tiki4 from "../../assets/images/tiki4.png"
 import SliderComponent from "../../components/SliderComponent/SliderComponent";
 import CardComponent from "../../components/CardComponent/CardComponent";
+import NavbarComponent from "../../components/NavbarComponent/NavbarComponent";
 
 const HomePage = () => {
   const arr = ["TV", "Tu lanh", "Lap top"];
@@ -24,6 +25,7 @@ const HomePage = () => {
       <div style={{marginTop: "20px", display:'flex', alignItems:"center", gap:"20px"}}>
         <CardComponent />
       </div>
+      <NavbarComponent></NavbarComponent>
       </div>
       
     </>
