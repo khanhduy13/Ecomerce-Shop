@@ -2,10 +2,9 @@ import { Card } from "antd";
 import styled from "styled-components"
 
 export const WrapperCardStyle = styled(Card)`
-    width: 200px;
     & img {
-        height: 200px;
-        width: 200px;
+        height: 250px;
+        width: 250px;
     },
     position: relative;
     
@@ -41,4 +40,9 @@ export const WrapperPriceDiscountText = styled.span`
     color: rgb(255, 66, 78);
     font-size: 12px;
     font-weight: 500;
+`
+export const WrapperStyleTextSell = styled.span`
+    font-size: 15px;
+    line-height: 24px;
+    color: rgb(120, 120, 120)
 `
