@@ -12,14 +12,15 @@ const HomePage = () => {
   const arr = ["TV", "Tu lanh", "Lap top"];
   return (
     <>
-    <div style={{padding:"0 120px"}} >
+    <div style={{ width: '1270px', margin: '0 auto' }} >
       <WrapperTypeProduct>
         {arr.map((item) => {
           return <TypeProduct name={item} key={item} />;
         })}
       </WrapperTypeProduct>
     </div>
-    <div id="container" style={{padding:'0 120px', backgroundColor:'#efefef', height:"1000px",width:'100%'}}>
+    <div style={{ width: '100%', backgroundColor: '#efefef', }}>
+    <div id="container" style={{ height: '1065px', width: '1270px', margin: '0 auto' }}>
       <SliderComponent arrImages={[tiki2,tiki3,tiki4]} />
       <WrapperProducts>
         <CardComponent />
@@ -33,12 +34,12 @@ const HomePage = () => {
         <CardComponent />
       </WrapperProducts>
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
-      <WrapperButtonMore textButton="Xem Thêm" type="outline" styleButton={{
+      <WrapperButtonMore textbutton="Xem Thêm" type="outline" styleButton={{
         border:"1px solid rgb(11, 116, 229)",color:'rgb(11, 116, 229)',width:'240px',height:'38px',borderRadius:'4px'
       }}/>
       </div>
       </div>
-      
+      </div>
     </>
   );
 };

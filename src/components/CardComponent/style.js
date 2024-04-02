@@ -8,6 +8,7 @@ export const WrapperCardStyle = styled(Card)`
     },
     position: relative;
     
+    
 `
 export const WrapperImageStyle = styled.img`
     top:-1px;

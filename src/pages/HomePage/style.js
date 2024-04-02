@@ -22,6 +22,7 @@ export const WrapperButtonMore = styled(ButtonComponents)`
     color: #9255FD;
     text-align: center;
     cursor: ${(props) => props.disabled ? 'not-allowed' : 'pointers'}
+    
 `
 export const WrapperProducts = styled.div`
     display: flex;
