@@ -153,7 +153,7 @@ const ProductDetailsComponent = () => {
                 border: "none",
                 borderRadius: "4px",
               }}
-              textButton={"Chọn mua"}
+              textbutton={"Chọn mua"}
               styleTextButton={{
                 color: "#fff",
                 fontSize: "15px",
@@ -171,7 +171,7 @@ const ProductDetailsComponent = () => {
               border: "1px solid rgb(13, 92, 182)",
               borderRadius: "4px",
             }}
-            textButton={"Mua trả sau"}
+            textbutton={"Mua trả sau"}
             styleTextButton={{ color: "rgb(13, 92, 182)", fontSize: "15px" }}
           ></ButtonComponents>
         </div>

@@ -7,9 +7,23 @@ import tiki3 from "../../assets/images/tiki3.png"
 import tiki4 from "../../assets/images/tiki4.png"
 import SliderComponent from "../../components/SliderComponent/SliderComponent";
 import CardComponent from "../../components/CardComponent/CardComponent";
+import * as ProductService from '../../service/ProductService'
+import { useQuery } from "@tanstack/react-query";
 
 const HomePage = () => {
   const arr = ["TV", "Tu lanh", "Lap top"];
+  const fetchProductAll = async () => {
+   const res = await ProductService.getAllProduct()
+   console.log("res",res)
+   return res
+  }
+  const { isLoading, data: products } = useQuery({
+    queryKey: ['product'],
+    queryFn: fetchProductAll,
+    retry: 3,
+    retryDelay: 1000
+  });
+  console.log("products",products)
   return (
     <>
     <div style={{ width: '1270px', margin: '0 auto' }} >
@@ -23,15 +37,23 @@ const HomePage = () => {
     <div id="container" style={{ height: '1065px', width: '1270px', margin: '0 auto' }}>
       <SliderComponent arrImages={[tiki2,tiki3,tiki4]} />
       <WrapperProducts>
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
-        <CardComponent />
+        {products?.data?.map((products) => {
+          return (
+            <CardComponent
+            key={products._id}
+            countInStock={products.countInStock}
+            description={products.description}
+            image={products.image}
+            name={products.name}
+            price={products.price}
+            rating={products.rating}
+            type={products.type}
+            selled={products.selled}
+            discount={products.discount}
+            id={products._id}
+          />
+          )
+        })}
       </WrapperProducts>
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
       <WrapperButtonMore textbutton="Xem Thêm" type="outline" styleButton={{
